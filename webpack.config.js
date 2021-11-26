@@ -1,15 +1,15 @@
 //path モジュールの読み込み
-const path = require('path');
+const path = require("path");
 //MiniCssExtractPlugin の読み込み
-const MiniCssExtractPlugin = require('mini-css-extract-plugin');
+const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 
 module.exports = {
   //エントリポイント（デフォルトと同じなので省略可）
-  entry: './src/js/script.js',
+  entry: "./src/js/script.js",
   //出力先（デフォルトと同じなので省略可）
   output: {
-    filename: 'main.js',
-    path: path.resolve(__dirname, 'dist'),
+    filename: "main.js",
+    path: path.resolve(__dirname, "dist"),
   },
   module: {
     rules: [
@@ -24,7 +24,7 @@ module.exports = {
           },
           // CSSをバンドルするためのローダー
           {
-            loader: 'css-loader',
+            loader: "css-loader",
             options: {
               //URL の解決を無効に
               url: false,
@@ -34,10 +34,10 @@ module.exports = {
           },
           // Sass を CSS へ変換するローダー
           {
-            loader: 'sass-loader',
+            loader: "sass-loader",
             options: {
               // dart-sass を優先
-              implementation: require('sass'),
+              implementation: require("sass"),
               // ソースマップを有効に
               sourceMap: true,
             },
@@ -50,11 +50,11 @@ module.exports = {
   plugins: [
     new MiniCssExtractPlugin({
       // 抽出する CSS のファイル名
-      filename: 'style.css',
+      filename: "style.css",
     }),
   ],
   //source-map タイプのソースマップを出力
-  devtool: 'source-map',
+  devtool: "source-map",
   // node_modules を監視（watch）対象から除外
   watchOptions: {
     ignored: /node_modules/, //正規表現で指定

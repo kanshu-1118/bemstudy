@@ -1,4 +1,5 @@
-@import './var';
+@import "ress";
+@import "./var";
 
 h1 {
   background-color: cadetblue;
@@ -7,10 +8,10 @@ h1 {
 p {
   color: $p_color;
   background-color: $p_bg_color;
-  font-size: 60px;
+  font-size: 100px;
 }
 
 body {
-  background-image: url('../images/user00000.jpg');
+  background-image: url("../images/user00000.jpg");
   color: white;
 }
